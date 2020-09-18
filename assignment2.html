@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus details</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    .data{
+      font-family: Cambria, Cochin, Georgia, Times, Times New Roman, 'serif';
+      height:500px ;
+      width: 80%;
+      background-color: rgb(17, 148, 255);
+      padding:20px;
+      margin-left: 10%;
+      margin-top: 100px;
+      display: inline-block;
+    }
+    .table{
+      width: 100%;
+      margin-top: 30px;
+    }
+    th,td{
+      height: 30px;
+      text-align: center;
+      padding: 5px;
+    }
+    .form{
+      margin: 20px;
+    }
+    input{
+      height: 30px;
+      text-indent: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="data">
+    <h1>Bus Details</h1>
+    <div class="form">
+      <form onsubmit="add(event)" ><!--if submit used it validates if onclick used it wont validate-->
+        <input type="text" required placeholder="Name" id="name">
+        <input type="text" required placeholder="Source" id="source">
+        <input type="text" required placeholder="Destination" id="dest">
+        <input type="text" required placeholder="Number" id="numb">
+        <input type="text" required placeholder="Passenger capacity" id="capacity">
+        <button type="submit" >add bus</button>
+      </form>
+    </div>
+    <div class="form">
+      <input type="text" id="search"  placeholder="search here" onkeyup="search()">
+    </div>
+    <table border="5"; cellspacing="0px" class="table" >
+      <thead>
+        <tr>
+          <th>Si.no</th>
+          <th>Name</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Number</th>
+          <th>Passenger Capacity</th>
+        </tr>
+      </thead>
+      <tbody class="tdata">
+        
+      </tbody>
+    </table>
+  </div>
+  <script src="assignment2.js"></script>
+
+</body>
+</html>
